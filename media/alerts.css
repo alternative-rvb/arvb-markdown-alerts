@@ -1,0 +1,277 @@
+/* Base alert styles */
+.alert {
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+}
+
+.alert > *:first-child {
+    margin-top: 0;
+}
+
+.alert > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Success alert - Green */
+.alert-success {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+/* Info alert - Blue */
+.alert-info {
+    background-color: #d1ecf1;
+    border-left-color: #17a2b8;
+    color: #0c5460;
+}
+
+/* Warning alert - Orange/Yellow */
+.alert-warning {
+    background-color: #fff3cd;
+    border-left-color: #ffc107;
+    color: #856404;
+}
+
+/* Danger alert - Red */
+.alert-danger {
+    background-color: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+/* Spoiler alert - Gray with details/summary */
+details.alert-spoiler {
+    background-color: #f8f9fa;
+    border-left-color: #6c757d;
+    color: #495057;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    padding: 0;
+}
+
+details.alert-spoiler:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+details.alert-spoiler summary {
+    font-weight: 600;
+    padding: 16px;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    background: linear-gradient(to right, rgba(108, 117, 125, 0.1), transparent);
+    border-radius: 6px 6px 0 0;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+details.alert-spoiler summary:hover {
+    background: linear-gradient(to right, rgba(108, 117, 125, 0.15), transparent);
+}
+
+details.alert-spoiler summary::-webkit-details-marker {
+    display: none;
+}
+
+details.alert-spoiler summary::before {
+    content: '▶';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #6c757d;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+details.alert-spoiler[open] summary::before {
+    transform: rotate(90deg);
+}
+
+details.alert-spoiler[open] summary {
+    border-bottom: 1px solid rgba(108, 117, 125, 0.2);
+}
+
+details.alert-spoiler > *:not(summary) {
+    animation: fadeIn 0.3s ease-in-out;
+    padding: 0 16px 0 40px;
+}
+
+details.alert-spoiler > *:not(summary):first-of-type {
+    margin-top: 0;
+    padding-top: 12px;
+}
+
+details.alert-spoiler > *:not(summary):last-child {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark theme support */
+body.vscode-dark .alert-success {
+    background-color: #1e4620;
+    border-left-color: #2ea043;
+    color: #7ee787;
+}
+
+body.vscode-dark .alert-info {
+    background-color: #0c2d6b;
+    border-left-color: #1f6feb;
+    color: #79c0ff;
+}
+
+body.vscode-dark .alert-warning {
+    background-color: #4d3800;
+    border-left-color: #d29922;
+    color: #f0c867;
+}
+
+body.vscode-dark .alert-danger {
+    background-color: #4b1113;
+    border-left-color: #f85149;
+    color: #ffa198;
+}
+
+body.vscode-dark details.alert-spoiler {
+    background-color: #2d333b;
+    border-left-color: #768390;
+    color: #adbac7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.vscode-dark details.alert-spoiler:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.vscode-dark details.alert-spoiler summary {
+    background: linear-gradient(to right, rgba(118, 131, 144, 0.15), transparent);
+}
+
+body.vscode-dark details.alert-spoiler summary:hover {
+    background: linear-gradient(to right, rgba(118, 131, 144, 0.25), transparent);
+}
+
+body.vscode-dark details.alert-spoiler summary::before {
+    color: #768390;
+}
+
+body.vscode-dark details.alert-spoiler[open] summary {
+    border-bottom-color: rgba(118, 131, 144, 0.3);
+}
+
+/* High contrast theme support */
+body.vscode-high-contrast .alert {
+    border: 2px solid;
+    border-left-width: 6px;
+}
+
+body.vscode-high-contrast .alert-success {
+    background-color: transparent;
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+body.vscode-high-contrast .alert-info {
+    background-color: transparent;
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+body.vscode-high-contrast .alert-warning {
+    background-color: transparent;
+    border-color: #ffff00;
+    color: #ffff00;
+}
+
+body.vscode-high-contrast .alert-danger {
+    background-color: transparent;
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+body.vscode-high-contrast details.alert-spoiler {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.vscode-high-contrast details.alert-spoiler summary {
+    background: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+body.vscode-high-contrast details.alert-spoiler summary::before {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+}
+
+body.vscode-high-contrast details.alert-spoiler[open] summary {
+    border-bottom-color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .alert {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    details.alert-spoiler summary {
+        padding: 12px;
+    }
+
+    details.alert-spoiler > *:not(summary) {
+        padding: 0 12px 0 32px;
+    }
+
+    details.alert-spoiler > *:not(summary):first-of-type {
+        padding-top: 12px;
+    }
+
+    details.alert-spoiler > *:not(summary):last-child {
+        padding-bottom: 12px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .alert {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    details.alert-spoiler {
+        /* Ensure spoilers are open when printing */
+    }
+
+    details.alert-spoiler[open] {
+        display: block;
+    }
+}

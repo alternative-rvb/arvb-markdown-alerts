@@ -1,0 +1,51 @@
+{
+  "name": "arvb-markdown-alerts",
+  "displayName": "ARVB Markdown Alerts",
+  "description": "Beautiful styled alerts for Markdown preview with support for success, info, warning, danger, and spoiler types",
+  "version": "1.0.0",
+  "publisher": "alternative-rvb",
+  "author": "Alternative RVB",
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "alerts",
+    "preview",
+    "styling",
+    "notifications"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./media/alerts.css"
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alternative-rvb/arvb-markdown-alerts"
+  }
+}
