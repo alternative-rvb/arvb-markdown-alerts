@@ -1,46 +1,43 @@
 # ARVB Markdown Alerts
 
-Beautiful styled alerts for Markdown preview in Visual Studio Code. Add colorful, professional-looking alerts to your Markdown documents with a simple syntax.
+Add beautiful, colorful alerts to your Markdown documents with a simple syntax. Perfect for documentation, README files, notes, and any Markdown content in VS Code.
+
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/alternative-rvb.arvb-markdown-alerts)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/alternative-rvb.arvb-markdown-alerts)
+![Visual Studio Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/alternative-rvb.arvb-markdown-alerts)
 
 ## Features
 
-- **5 Alert Types**: Success, Info, Warning, Danger, and Spoiler
-- **Rich Content Support**: Use Markdown formatting inside alerts (lists, code blocks, links, emphasis, etc.)
-- **Theme Aware**: Automatically adapts to VS Code themes (light, dark, high contrast)
-- **Spoiler Support**: Collapsible content with custom titles using HTML5 `<details>`/`<summary>` elements
-- **Lightweight**: No external dependencies beyond markdown-it
-- **Secure**: Built-in XSS protection with HTML escaping
+- ✓ **5 Alert Types**: Success, Info, Warning, Danger, and Spoiler
+- ✓ **Rich Content Support**: Use full Markdown formatting inside alerts (lists, code blocks, links, emphasis, etc.)
+- ✓ **Theme Aware**: Automatically adapts to VS Code themes (light, dark, high contrast)
+- ✓ **Spoiler Support**: Collapsible content with custom titles using HTML5 `<details>`/`<summary>` elements
+- ✓ **Lightweight**: Minimal footprint, fast rendering
+- ✓ **Secure**: Built-in XSS protection with HTML escaping
+
+## Quick Start
+
+1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=alternative-rvb.arvb-markdown-alerts)
+2. Open any Markdown file
+3. Add an alert using the `:::type` syntax
+4. Open Markdown preview (`Ctrl+K V` or `Cmd+K V` on Mac)
 
 ## Installation
 
+### From VS Code Marketplace (Recommended)
+
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X` on Mac)
+3. Search for "ARVB Markdown Alerts"
+4. Click **Install**
+
 ### From VSIX File
 
-1. Download the latest `arvb-markdown-alerts-1.0.0.vsix` file
+1. Download the latest `.vsix` file from [Releases](https://github.com/alternative-rvb/arvb-markdown-alerts/releases)
 2. Open VS Code
 3. Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
-4. Type "Install from VSIX" and select "Extensions: Install from VSIX..."
+4. Type "Install from VSIX" and select **Extensions: Install from VSIX...**
 5. Select the downloaded `.vsix` file
-6. Reload VS Code when prompted
-
-### From Source
-
-```bash
-# Clone the repository
-git clone https://github.com/alternative-rvb/arvb-markdown-alerts.git
-cd arvb-markdown-alerts
-
-# Install dependencies
-npm install
-
-# Compile the extension
-npm run compile
-
-# Package the extension
-npm run package
-
-# Install the generated .vsix file
-code --install-extension arvb-markdown-alerts-1.0.0.vsix
-```
 
 ## Usage
 
@@ -157,34 +154,17 @@ A comprehensive test file is included: `test-alerts.md`
 2. Press `Ctrl+K V` (or `Cmd+K V` on Mac) to open Markdown preview
 3. Verify all 5 alert types display correctly with proper styling
 
-## Visual Guide
+## Visual Preview
 
-```
-┌─────────────────────────────────────────┐
-│ ✓ Success Alert (Green)                │
-│ Operation completed successfully!       │
-└─────────────────────────────────────────┘
+| Alert Type | Icon | Color | Use Case |
+|------------|------|-------|----------|
+| **Success** | ✓ | Green | Confirmations, successful operations |
+| **Info** | ℹ | Blue | General information, tips |
+| **Warning** | ⚠ | Yellow/Orange | Cautions, important notes |
+| **Danger** | ✖ | Red | Errors, critical warnings |
+| **Spoiler** | 👁 | Gray | Collapsible hidden content |
 
-┌─────────────────────────────────────────┐
-│ ℹ Info Alert (Blue)                     │
-│ Here's some useful information.         │
-└─────────────────────────────────────────┘
-
-┌─────────────────────────────────────────┐
-│ ⚠ Warning Alert (Yellow/Orange)         │
-│ Please review before proceeding.        │
-└─────────────────────────────────────────┘
-
-┌─────────────────────────────────────────┐
-│ ✖ Danger Alert (Red)                    │
-│ Critical error detected!                │
-└─────────────────────────────────────────┘
-
-┌─────────────────────────────────────────┐
-│ ▶ Spoiler Alert (Gray, Collapsible)    │
-│ [Click to expand/collapse]              │
-└─────────────────────────────────────────┘
-```
+> **Note:** All alerts automatically adapt to your VS Code theme (light/dark/high contrast)
 
 ## Development
 
@@ -272,9 +252,34 @@ arvb-markdown-alerts/
 3. Try clicking on the summary to expand/collapse
 4. Check browser console for any errors
 
+## Why Choose ARVB Markdown Alerts?
+
+- **No Configuration Required**: Works out of the box, no settings to configure
+- **Lightweight & Fast**: Minimal performance impact on VS Code
+- **Standards Compliant**: Uses semantic HTML5 elements
+- **Secure by Design**: All content is properly escaped to prevent XSS
+- **Open Source**: MIT licensed, community-driven development
+
+## Support & Feedback
+
+- **Issues**: Report bugs or request features on [GitHub Issues](https://github.com/alternative-rvb/arvb-markdown-alerts/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/alternative-rvb/arvb-markdown-alerts/discussions)
+- **Reviews**: Leave a review on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=alternative-rvb.arvb-markdown-alerts&ssr=false#review-details)
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+Contributions are welcome! Please feel free to:
+
+- Submit bug reports and feature requests
+- Create pull requests for improvements
+- Share your use cases and feedback
+- Help improve documentation
+
+See our [GitHub repository](https://github.com/alternative-rvb/arvb-markdown-alerts) for more details.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 
@@ -282,16 +287,14 @@ MIT License - Copyright (c) 2024-2025 Alternative RVB
 
 See [LICENSE](LICENSE) file for details.
 
-## Author
-
-**Alternative RVB**
-
 ## Acknowledgments
 
 - Built with [markdown-it](https://github.com/markdown-it/markdown-it)
 - Inspired by GitHub-flavored Markdown alerts
-- Developed for the VS Code community
+- Developed with ❤️ for the VS Code community
 
 ---
 
-**Enjoy using ARVB Markdown Alerts!** If you find this extension useful, please consider giving it a star ⭐
+**Enjoying ARVB Markdown Alerts?**
+
+⭐ Star us on [GitHub](https://github.com/alternative-rvb/arvb-markdown-alerts) | 📝 Leave a [review](https://marketplace.visualstudio.com/items?itemName=alternative-rvb.arvb-markdown-alerts&ssr=false#review-details) | 🐛 [Report issues](https://github.com/alternative-rvb/arvb-markdown-alerts/issues)

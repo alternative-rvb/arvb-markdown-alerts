@@ -1,16 +1,19 @@
 {
   "name": "arvb-markdown-alerts",
   "displayName": "ARVB Markdown Alerts",
-  "description": "Beautiful styled alerts for Markdown preview with support for success, info, warning, danger, and spoiler types",
+  "description": "Add beautiful, colorful alerts (success, info, warning, danger, spoiler) to your Markdown preview. Perfect for documentation and notes.",
   "version": "1.0.0",
   "publisher": "alternative-rvb",
-  "author": "Alternative RVB",
+  "author": {
+    "name": "Alternative RVB"
+  },
   "license": "MIT",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Formatters",
     "Other"
   ],
   "keywords": [
@@ -18,8 +21,24 @@
     "alerts",
     "preview",
     "styling",
-    "notifications"
+    "notifications",
+    "admonitions",
+    "callouts",
+    "boxes",
+    "documentation"
   ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "badges": [
+    {
+      "url": "https://img.shields.io/github/license/alternative-rvb/arvb-markdown-alerts",
+      "href": "https://github.com/alternative-rvb/arvb-markdown-alerts/blob/main/LICENSE",
+      "description": "License"
+    }
+  ],
+  "qna": "https://github.com/alternative-rvb/arvb-markdown-alerts/discussions",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {

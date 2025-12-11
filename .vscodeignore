@@ -1,11 +1,40 @@
+# Development workspace
 .vscode/**
 .vscode-test/**
+
+# Source files (compiled code is in out/)
 src/**
-.gitignore
-tsconfig.json
-**/*.map
 **/*.ts
+!out/**/*.js
+
+# Build artifacts
+**/*.map
+
+# Git and config files
+.git/**
+.gitignore
+.editorconfig
+.eslintrc.json
+tsconfig.json
+
+# Dependencies
 node_modules/**
+
+# Developer documentation (not needed by end users)
+PUBLISHING.md
+CONTRIBUTING.md
+SECURITY.md
+PROJECT_STRUCTURE.md
+test-alerts.md
+
+# Package and logs
+*.vsix
 *.log
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# Optional: Screenshots (if you add them)
+screenshots/**
+.github/**
