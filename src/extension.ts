@@ -155,9 +155,39 @@ function renderAlertClose(tokens: any[], idx: number): string {
 }
 
 /**
+ * Checks for conflicting extensions and shows a warning
+ */
+function checkForConflictingExtensions() {
+    const conflictingExtensions = [
+        {
+            id: 'yzhang.markdown-all-in-one',
+            name: 'Markdown All in One'
+        }
+    ];
+
+    for (const ext of conflictingExtensions) {
+        const extension = vscode.extensions.getExtension(ext.id);
+        if (extension) {
+            vscode.window.showWarningMessage(
+                `ARVB Markdown Alerts: Conflict detected! "${ext.name}" is incompatible with this extension. ` +
+                `Alerts may not render correctly. Please disable or uninstall "${ext.name}" to use ARVB Markdown Alerts.`,
+                'Open Extensions'
+            ).then(selection => {
+                if (selection === 'Open Extensions') {
+                    vscode.commands.executeCommand('workbench.extensions.search', ext.id);
+                }
+            });
+        }
+    }
+}
+
+/**
  * Activate the extension
  */
 export function activate(context: vscode.ExtensionContext) {
+    // Check for conflicting extensions on activation
+    checkForConflictingExtensions();
+
     return {
         extendMarkdownIt(md: MarkdownIt) {
             // Register the block rule for alerts

@@ -252,6 +252,29 @@ arvb-markdown-alerts/
 3. Try clicking on the summary to expand/collapse
 4. Check browser console for any errors
 
+## Known Issues & Compatibility
+
+### ⚠️ Extension Conflicts
+
+**Markdown All in One (yzhang.markdown-all-in-one)** is **incompatible** with ARVB Markdown Alerts.
+
+Both extensions modify the markdown-it parser, which causes conflicts in the rendering pipeline. If you have both extensions installed, alerts may:
+- Not render at all (displayed as raw `:::` syntax)
+- Render incorrectly with wrong styles
+- Cause the extension to fail silently
+
+**Solution:** Disable or uninstall "Markdown All in One" to use ARVB Markdown Alerts.
+
+The extension will automatically detect this conflict and display a warning notification if both extensions are active.
+
+### Remote Development (WSL, SSH, Dev Containers)
+
+This extension works correctly in remote development environments (WSL, SSH, Dev Containers). If you encounter issues:
+
+1. Ensure the extension is installed **in the remote environment**, not just locally
+2. Look for "Install in WSL" or "Install in SSH" buttons in the Extensions view
+3. Reload the VS Code window after installation
+
 ## Why Choose ARVB Markdown Alerts?
 
 - **No Configuration Required**: Works out of the box, no settings to configure

@@ -49,9 +49,9 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "package": "vsce package"
+    "compile": "node node_modules/typescript/bin/tsc -p ./",
+    "watch": "node node_modules/typescript/bin/tsc -watch -p ./",
+    "package": "node node_modules/@vscode/vsce/vsce package"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
